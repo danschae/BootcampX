@@ -18,7 +18,7 @@ LIMIT $2`;
 
 const values = [`%${arg[0]}%`, arg[1]];
 
-pool.query(queryStringOne, values)
+pool.query(queryString, values)
 .then(res => {
   res.rows.forEach(user => {
     console.log(`${user.name} has an id of ${user.id} and was in the ${user.cohort_name} cohort`);
